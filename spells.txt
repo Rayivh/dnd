@@ -1,0 +1,38 @@
+name{},type{},level{},castingTime{},range{},components{},duration{},description{}
+
+Name: Acid Splash
+Level: Cantrip
+Casting time: 1 Action
+Range: 60 feet
+Components: V, S
+Duration: Instantaneous
+Description: "You hurl a bubble of acid.
+Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage"
+
+
+name{},type{},level{},castingTime{},range{},components{},duration{},description{}
+
+name{Acid Splash},type{Conjuration},level{0},castingTime{1a},range{60},components{V,S},duration{0},description{You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. }
+name{Animal Shapes},type{Transmutation},level{8},castingTime{1a},range{30},components{V,S},duration{u24,c},description{Your magic turns others into beasts. Choose any number of willing creatures that you can see within range. You transform each target into the form of a large or smaller beast with a challenge rating of 4 or lower. On subsequent turns, you can use your actions to transform affected creatures into new forms. The transformation lasts for the duration for each target, or until the target drops to 0 hit points or dies. You can choose a different form for each target. A target’s game statistics are replaced by the statistics of the chosen beast, though the target retains its alignment and Intelligence, Wisdom, and Charisma scores. The target assumes the hit points of its new form, and when it reverts to its normal form, it returns to the number of hit point it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature’s normal form to 0 hit points, it isn’t knocked unconscious. The creature is limited in the actions it can perform by the nature of its new form, and it can’t speak or cast spells. The target’s gear melds into the new form. The target can’t activate, wield, or otherwise benefit from any of its equipment.}
+
+Duration 0 = Instant
+u24h = Up to 24 Hours
+1a = 1 Action
+1b = 1 Bonus Action
+s = Self
+1r = 1 Round
+1m = 1 Minute
+10f = 10 Feet
+c = Concentration
+Components V = Verbal, S = Somatic, M = Material/reagent
+
+name{Fire Bolt},type{Evocation},level{0},castingTime{1a},range{120},components{V,S},duration{0},description{}
+name{Shield},type{Abjuration},level{1},castingTime{reaction},range{s},components{V,S},duration{1r},description{}
+name{Wish},type{Conjuration},level{9},castingTime{1a},range{s},components{V},duration{0},description{}
+name{Misty Step},type{Conjuration},level{2},castingTime{1b},range{s},components{V},duration{0},description{}
+name{Leomund’s Tiny Hut (Ritual)},type{Evocation},level{3},castingTime{1m},range{self(10f radius hemisphere)},components{V,S,M(A small crystal bead)},duration{8},description{}
+name{Heal},type{Evocation},level{6},castingTime{1a},range{60},components{V,S},duration{0},description{}
+name{Faerie Fire},type{Evocation},level{1},castingTime{1a},range{60},components{V},duration{c,1m},description{}
+name{Cloudkill},type{Conjuration},level{5},castingTime{1a},range{120},components{V,S},duration{c,10m},description{}
+name{Augury (Ritual)},type{Divination},level{2},castingTime{},range{s},components{V,S,M()},duration{},description{}
+name{Blade Ward},type{Abjuration},level{0},castingTime{1a},range{s},components{V,S},duration{1r},description{}
