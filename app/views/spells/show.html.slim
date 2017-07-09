@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @spell.name
+p
+  strong Level:
+  = @spell.level
+p
+  strong Casting time:
+  = @spell.casting_time
+p
+  strong Range:
+  = @spell.range
+p
+  strong Components:
+  = @spell.components
+p
+  strong Duration:
+  = @spell.duration
+p
+  strong Description:
+  = @spell.description
+
+= link_to 'Edit', edit_spell_path(@spell)
+'|
+= link_to 'Back', spells_path

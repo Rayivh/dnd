@@ -1,0 +1,30 @@
+= form_for @spell do |f|
+  - if @spell.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@spell.errors.count, "error")} prohibited this spell from being saved:"
+      ul
+        - @spell.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :level
+    = f.number_field :level
+  .field
+    = f.label :casting_time
+    = f.text_field :casting_time
+  .field
+    = f.label :range
+    = f.text_field :range
+  .field
+    = f.label :components
+    = f.text_field :components
+  .field
+    = f.label :duration
+    = f.text_field :duration
+  .field
+    = f.label :description
+    = f.text_area :description
+  .actions = f.submit

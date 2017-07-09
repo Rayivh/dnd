@@ -1,0 +1,33 @@
+h1 Listing spells
+
+table
+  thead
+    tr
+      th Name
+      th Level
+      th Casting time
+      th Range
+      th Components
+      th Duration
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @spells.each do |spell|
+      tr
+        td = spell.name
+        td = spell.level
+        td = spell.casting_time
+        td = spell.range
+        td = spell.components
+        td = spell.duration
+        td = spell.description
+        td = link_to 'Show', spell
+        td = link_to 'Edit', edit_spell_path(spell)
+        td = link_to 'Destroy', spell, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Spell', new_spell_path
