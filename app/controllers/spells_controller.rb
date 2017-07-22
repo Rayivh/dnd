@@ -1,5 +1,17 @@
 class SpellsController < ApplicationController
   before_action :set_spell, only: [:show, :edit, :update, :destroy]
+  autocomplete :spell, :name, :full => true
+
+  # GET /spells/search?name=something
+  def search
+    @spells = Spell.where("name LIKE ?", "%#{params[:name]}%")
+    if @spells.count > 1
+      render action: :index
+    else
+      @spell = @spells.first
+      render action: :show
+    end
+  end
 
   # GET /spells
   # GET /spells.json
@@ -69,6 +81,16 @@ class SpellsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spell_params
-      params.require(:spell).permit(:name, :level, :casting_time, :range, :components, :duration, :description)
+      params.require(:spell).
+        permit(
+          :name,
+          :level,
+          :casting_time,
+          :range,
+          :components,
+          :duration,
+          :description
+        ).
+        tap { |hash| hash[:components] = hash[:components].split(",").map(&:strip) }
     end
 end

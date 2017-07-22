@@ -20,7 +20,7 @@
     = f.text_field :range
   .field
     = f.label :components
-    = f.text_field :components
+    = f.text_field :components, :value => @spell.components.join(",")
   .field
     = f.label :duration
     = f.text_field :duration

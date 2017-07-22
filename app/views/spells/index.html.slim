@@ -1,5 +1,8 @@
 h1 Listing spells
 
+= form_tag search_spells_path, method: :get
+  = autocomplete_field_tag 'name', '', autocomplete_spell_name_spells_path
+
 table
   thead
     tr
@@ -17,7 +20,7 @@ table
   tbody
     - @spells.each do |spell|
       tr
-        td = spell.name
+        td = link_to spell.name, spell
         td = spell.level
         td = spell.casting_time
         td = spell.range
