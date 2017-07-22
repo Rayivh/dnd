@@ -1,35 +1,36 @@
 h1 Listing spells
 
-= form_tag search_spells_path, method: :get
-  = autocomplete_field_tag 'name', '', autocomplete_spell_name_spells_path
-
-table
-  thead
-    tr
-      th Name
-      th Level
-      th Casting time
-      th Range
-      th Components
-      th Duration
-      th Description
-      th
-      th
-      th
-
-  tbody
-    - @spells.each do |spell|
+.spells-index
+  = form_tag search_spells_path, method: :get
+    = autocomplete_field_tag 'name', '', autocomplete_spell_name_spells_path
+    = submit_tag "Search"
+  table
+    thead
       tr
-        td = link_to spell.name, spell
-        td = spell.level
-        td = spell.casting_time
-        td = spell.range
-        td = spell.components
-        td = spell.duration
-        td = spell.description
-        td = link_to 'Show', spell
-        td = link_to 'Edit', edit_spell_path(spell)
-        td = link_to 'Destroy', spell, data: {:confirm => 'Are you sure?'}, :method => :delete
+        th Name
+        th Level
+        th Casting time
+        th Range
+        th Components
+        th Duration
+        th Description
+        th
+        th
+        th
+
+    tbody
+      - @spells.each do |spell|
+        tr
+          td = link_to spell.name, spell
+          td = spell.level
+          td = spell.casting_time
+          td = spell.range
+          td = spell.components
+          td = spell.duration
+          td = spell.description
+          td = link_to 'Show', spell
+          td = link_to 'Edit', edit_spell_path(spell)
+          td = link_to 'Destroy', spell, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 

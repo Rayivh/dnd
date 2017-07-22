@@ -55,6 +55,8 @@ GEM
     execjs (2.7.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.8.5)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -65,6 +67,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
+    jquery-ui-themes (0.0.12)
+      httparty
     json (1.8.6)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -76,6 +80,7 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     rack (1.6.8)
@@ -181,6 +186,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  jquery-ui-themes
   rails (= 4.2.5.2)
   rails-jquery-autocomplete
   rspec-rails
